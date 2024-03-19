@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Team Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #red;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: green;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .team-member {
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            width: 70%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .company-info {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .team-member {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .team-member {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-bar">
+    <!-- Add your menu items here -->
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+</div>
+
+<header onclick="toggleCompanyInfo()">
+    <h1>VeriTech Software</h1>
+    <p>Software company</p>
+</header>
+
+<div class="container">
+    <a href="mailto:anamica3116@gmail.com" class="team-member">
+        <img src="anamica.jpg" alt="Team Member 1">
+        <h2>Anamica Kumari</h2>
+        <p>Position: CEO</p>
+        <p>Email Id: anamica3116@gmail.com</p>
+    </a>
+    <a href="mailto:thepallavi@gmail.com" class="team-member">
+        <img src="pallavi.jpg" alt="Team Member 2">
+        <h2>Pallavi Kumari</h2>
+        <p>Position: CTO</p>
+        <p>Email Id: thepallavi@gmail.com</p>
+    </a>
+    <a href="mailto:pinkey2119@gmail.com" class="team-member">
+        <img src="pinkey.jpg" alt="Team Member 3">
+        <h2>Pinkey Kumari</h2>
+        <p>Position: Admin</p>
+        <p>Email Id: pinkey2119@gmail.com</p>
+    </a>
+    <!-- Add more team members as needed -->
+</div>
+
+<footer>
+    <p>Contact: veritechsoftware.in | Phone: 123-456-7890</p>
+</footer>
+
+<div id="companyInfo" class="company-info">
+    <h2>About VeriTech Software</h2>
+    <p>VeriTech Software is a leading software company providing innovative solutions in various industries.</p>
+    <p>Contact us for more information.</p>
+</div>
+
+<script>
+    function toggleCompanyInfo() {
+        var info = document.getElementById("companyInfo");
+        if (info.style.display === "none") {
+            info.style.display = "block";
+        } else {
+            info.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
